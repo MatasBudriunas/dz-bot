@@ -17,7 +17,7 @@ def bot():
 
 
 def interact_with_website(input_text):
-    browser = setupSeleniumBrowser()
+    browser = setup_selenium_browser()
     browser.get('https://chroniclesofdenzar.com/index.php?redir=/explore.php')
 
     # Wait for the input field to be clickable
@@ -47,7 +47,7 @@ def interact_with_website(input_text):
     return response_text
 
 
-def setupSeleniumBrowser():
+def setup_selenium_browser():
     options = webdriver.FirefoxOptions()
     options.add_argument('-headless')
     browser = webdriver.Firefox(options=options)
